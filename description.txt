@@ -1,0 +1,49 @@
+ Task Description -
+
+Create a React login form with input fields for username and password.
+
+Use the useState hook to manage and update form input data in real time.
+
+Implement a Login button that validates input fields and displays an error if any field is empty.
+
+When submitted, log the entered username and password to the console to confirm state updates.
+
+Set up a Node.js + Express.js backend to handle authentication requests.
+
+Create a /login route that checks user credentials (hardcoded users can be used for simplicity).
+
+Generate a JWT token upon successful login and send it to the client.
+
+Store the JWT secret key securely (for example, in an environment variable).
+
+Build a JWT verification middleware that checks for the token in the request header (Authorization: Bearer <token>).
+
+Validate the token and ensure only authenticated users can access protected routes.
+
+Create one or more protected routes (e.g., /user-profile) that return data only when a valid token is provided.
+
+Add Role-Based Access Control (RBAC) to assign user roles such as Admin, Moderator, and User.
+
+Include the user’s role inside the JWT payload when issuing the token.
+
+Create an authorization middleware that verifies the user’s role and restricts access based on allowed roles.
+
+Implement role-specific routes, for example:
+
+/admin-dashboard → accessible only by Admin.
+
+/moderator-panel → accessible only by Moderator.
+
+/user-profile → accessible by any logged-in User.
+
+Handle unauthorized requests with clear error messages (e.g., “Access Denied” or “Invalid Token”).
+
+Test the application thoroughly using Postman or the frontend by:
+
+Accessing protected routes without a token (should be denied).
+
+Accessing protected routes with a valid token (should succeed).
+
+Logging in with different roles and confirming role-based restrictions work correctly.
+
+Ensure the system properly demonstrates state management (frontend), authentication (JWT), and authorization (RBAC) in one integrated workflow.
